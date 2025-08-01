@@ -7,7 +7,9 @@ void main() {
       home: Scaffold(
         body:  Container(
             decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.red, Colors.yellow],
+              gradient: LinearGradient(colors: [
+                Colors.blue,
+                Colors.blueAccent],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
 

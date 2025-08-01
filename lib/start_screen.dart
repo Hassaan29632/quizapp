@@ -20,11 +20,12 @@ class homescreen extends StatelessWidget {
 
           ),),
           SizedBox(height: 20),
-          ElevatedButton(onPressed: (){},
+          OutlinedButton.icon(onPressed: (){},
               style: ElevatedButton.styleFrom(
-                 backgroundColor: Colors.yellow,
+                 backgroundColor: Colors.white,
               ),
-              child: Text("start app")),
+              icon: Icon(Icons.arrow_right_alt_outlined),
+              label: Text("start app")),
         ],
       ),
     );
