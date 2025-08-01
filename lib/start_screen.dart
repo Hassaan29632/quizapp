@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class homescreen extends StatelessWidget {
-  const homescreen({super.key});
+class startscreen extends StatelessWidget {
+  const startscreen({super.key});
 
   @override
   Widget build(context) {
@@ -10,8 +10,12 @@ class homescreen extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Image.asset('assets/images/dartq.png',
-            width: 200,
+          // Opacity(
+          //   opacity: 0.6,
+      //      child:
+      Image.asset('assets/images/dartq.png',
+          width: 200,
+
           ),
           const Text("Flutter Quiz App",
           style: TextStyle(
