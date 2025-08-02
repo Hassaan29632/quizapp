@@ -14,8 +14,7 @@ class questionsscreen extends StatefulWidget {
 class _questionsState extends State<questionsscreen> {
   @override
   Widget build(context) {
-
-    var currentQuestion = questions[0];
+   final currentQuestion = questions[0];
 
     return Center(
       child: Column(
@@ -24,10 +23,10 @@ class _questionsState extends State<questionsscreen> {
           Text(currentQuestion.text, style: TextStyle(color: Colors.white)),
           SizedBox(height: 30),
 
-          answerbutton(answer: currentQuestion.answers[0], ontap: () {}),
-          answerbutton(answer: currentQuestion.answers[1], ontap: () {}),
-          answerbutton(answer: currentQuestion.answers[2], ontap: () {}),
-          answerbutton(answer: currentQuestion.answers[3], ontap: () {}),
+//it will dynamically add options according to the answers options provided in answer file
+          ...currentQuestion.answers.map((answers) {
+            return answerbutton(answer: answers, ontap: () {});
+          }),
         ],
       ),
     );
