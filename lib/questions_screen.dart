@@ -1,18 +1,48 @@
 import 'package:flutter/material.dart';
 
-class questions extends StatefulWidget {
-  const questions ({super.key});
+class questionsscreen extends StatefulWidget {
+  const questionsscreen({super.key});
 
   @override
-  State<questions> createState()  {
-    return  _questionsState();
-    
+  State<questionsscreen> createState() {
+    return _questionsState();
   }
 }
 
-class _questionsState extends State<questions> {
+class _questionsState extends State<questionsscreen> {
   @override
-  Widget build( context) {
-    return Text("what is your name ");
+  Widget build(context) {
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text('the questoins '),
+          SizedBox(height: 30),
+
+          ElevatedButton(
+              onPressed: () {},
+              child: Text("Answer 1 ")
+          ),
+
+          ElevatedButton(
+              onPressed: () {},
+              child: Text("Answer 2 ")
+          ),
+
+          ElevatedButton(
+              onPressed: () {},
+              child: Text("Answer 3 ")
+          ),
+
+          ElevatedButton(
+              onPressed: () {},
+              child: Text("Answer 4 ")
+          ),
+
+
+
+        ],
+      ),
+    );
   }
 }

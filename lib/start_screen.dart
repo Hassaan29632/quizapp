@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-
+import 'package:quiz_app/questions_screen.dart';
+import 'package:quiz_app/quiz.dart';
 
 class startscreen extends StatelessWidget {
-  const startscreen({super.key});
+  const startscreen(this.startquiz, {super.key});
+
+  final void Function() startquiz;
 
   @override
   Widget build(context) {
@@ -12,27 +15,23 @@ class startscreen extends StatelessWidget {
         children: [
           // Opacity(
           //   opacity: 0.6,
-      //      child:
-      Image.asset('assets/images/dartq.png',
-          width: 200,
-
+          //      child:
+          Image.asset('assets/images/dartq.png', width: 200),
+          const Text(
+            "Flutter Quiz App",
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
-          const Text("Flutter Quiz App",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
-
-          ),),
           SizedBox(height: 20),
-          OutlinedButton.icon(onPressed: (){},
-              style: ElevatedButton.styleFrom(
-                 backgroundColor: Colors.white,
-              ),
-              icon: Icon(Icons.arrow_right_alt_outlined),
-              label: Text("start app")),
+          OutlinedButton.icon(
+            onPressed: () {
+              startquiz();
+            },
+            style: ElevatedButton.styleFrom(backgroundColor: Colors.white),
+            icon: Icon(Icons.arrow_right_alt_outlined),
+            label: Text("start app"),
+          ),
         ],
       ),
     );
-
   }
 }
