@@ -14,20 +14,30 @@ class questionsscreen extends StatefulWidget {
 class _questionsState extends State<questionsscreen> {
   @override
   Widget build(context) {
-   final currentQuestion = questions[0];
+    final currentQuestion = questions[0];
 
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(currentQuestion.text, style: TextStyle(color: Colors.white)),
-          SizedBox(height: 30),
+    return SizedBox(
+      width: double.infinity,
 
-//it will dynamically add options according to the answers options provided in answer file
-          ...currentQuestion.answers.map((answers) {
-            return answerbutton(answer: answers, ontap: () {});
-          }),
-        ],
+      child: Container(
+        margin: EdgeInsets.all(60),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Text(
+              currentQuestion.text,
+              style: TextStyle(color: Colors.white),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 30),
+
+            //it will dynamically add options according to the answers options provided in answer file
+            ...currentQuestion.answers.map((answers) {
+              return answerbutton(answer: answers, ontap: () {});
+            }),
+          ],
+        ),
       ),
     );
   }
