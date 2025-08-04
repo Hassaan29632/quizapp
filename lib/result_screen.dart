@@ -35,7 +35,7 @@ return summary;
           children: [
             Text("you answered x out of y "),
             SizedBox(height: 20,),
-            TextButton(onPressed: (){}, child: Text("restart quiz "))
+            ElevatedButton(onPressed: (){}, child: Text("restart quiz "))
           ],
         ),
       ),
