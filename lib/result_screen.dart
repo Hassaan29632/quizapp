@@ -31,7 +31,7 @@ return summary;
 
     final summarydata = getsummarydata();
     final numberofquestons = questions.length;
-    //map used to filter the list 
+    //map used to filter the list
     final numberofcorrectanswers =summarydata.where((data){
       return data['user answer'] == data['correct answer'];
 
@@ -48,6 +48,7 @@ return summary;
             Text("you answered correctly  $numberofcorrectanswers out of $numberofquestons "),
             SizedBox(height: 20,),
             QuestionsSummary(summarydata),
+            SizedBox(height: 20,),
             ElevatedButton(onPressed: (){}, child: Text("restart quiz "))
           ],
         ),
