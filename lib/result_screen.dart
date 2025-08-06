@@ -31,10 +31,11 @@ return summary;
 
     final summarydata = getsummarydata();
     final numberofquestons = questions.length;
+    //map used to filter the list 
     final numberofcorrectanswers =summarydata.where((data){
       return data['user answer'] == data['correct answer'];
 
-    });
+    }).length;
 
     return SizedBox(
       width: double.infinity,
@@ -44,7 +45,7 @@ return summary;
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("you answered x out of y "),
+            Text("you answered correctly  $numberofcorrectanswers out of $numberofquestons "),
             SizedBox(height: 20,),
             QuestionsSummary(summarydata),
             ElevatedButton(onPressed: (){}, child: Text("restart quiz "))
