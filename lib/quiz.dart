@@ -32,7 +32,7 @@ class _Quizstate extends State<Quiz> {
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
-        selectedAnswers = [];
+         // selectedAnswers = [];
         activescreen = 'result screen';
       });
     }
