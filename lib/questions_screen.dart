@@ -41,7 +41,7 @@ class _questionsState extends State<questionsscreen> {
               currentQuestion.text,
               style: GoogleFonts.lato(
                 color: Colors.white,
-                fontSize: 28,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
@@ -49,11 +49,11 @@ class _questionsState extends State<questionsscreen> {
             SizedBox(height: 30),
 
             //it will dynamically add options according to the answers options provided in answer file
-            ...currentQuestion.getshuffledanswers().map((answers) {
+            ...currentQuestion.getshuffledanswers().map((answer) {
               return answerbutton(
-                answer: answers,
+                answer: answer,
                 ontap: () {
-                  answerquestion(answers);
+                  answerquestion(answer);
                 },
               );
             }),
